@@ -10963,7 +10963,7 @@ img.brand-icon {
 section.user_info {
     padding-bottom: 10px;
     margin-top: 20px;
-    text-align: center;
+    text-align: center;}
     .gravatar {
     float: none;
     max-width: 70px;
@@ -10974,7 +10974,7 @@ section.user_info {
     margin-bottom: 3px;
     margin-top: 15px;
     }
-}
+/*}*/
 
 .gravatar {
     float: left;
