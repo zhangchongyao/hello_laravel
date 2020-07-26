@@ -10963,18 +10963,20 @@ img.brand-icon {
 section.user_info {
     padding-bottom: 10px;
     margin-top: 20px;
-    text-align: center;}
-    .gravatar {
+    text-align: center;
+
+.gravatar {
     float: none;
     max-width: 70px;
-    }
-    h1 {
+}
+
+h1 {
     font-size: 1.4em;
     letter-spacing: -1px;
     margin-bottom: 3px;
     margin-top: 15px;
-    }
-/*}*/
+}
+}
 
 .gravatar {
     float: left;
