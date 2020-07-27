@@ -12,10 +12,10 @@ class StatusesTableSeeder extends Seeder
      */
     public function run()
     {
-        $user_ids = ['1','51'];
+        $user_ids = ['1','2', '3'];
         $faker = app(Faker\Generator::class);
 
-        $statuses = factory(Status::class)->times(20)->make()->each(function($status) use ($faker, $user_ids) {
+        $statuses = factory(Status::class)->times(50)->make()->each(function($status) use ($faker, $user_ids) {
             $status->user_id = $faker->randomElement($user_ids);
         });
 
