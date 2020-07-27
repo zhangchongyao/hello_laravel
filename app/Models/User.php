@@ -63,4 +63,14 @@ class User extends Authenticatable
     {
         return $this->hasMany(Status::class);
     }
+
+    /**
+     * 获取用户的动态，并排序（倒序）
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function feed()
+    {
+        return $this->statuses()
+            ->orderBy('created_at', 'desc');
+    }
 }
