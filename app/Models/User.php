@@ -65,12 +65,15 @@ class User extends Authenticatable
     }
 
     /**
-     * 获取用户的动态，并排序（倒序）
+     * 获取关注用户的动态，并排序（倒序）
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function feed()
     {
-        return $this->statuses()
+        $user_ids = $this->followings->pluck('id')->toArray();
+        array_push($user_ids, $this->id);
+        return Status::whereIn('user_id', $user_ids)
+            ->with('user')
             ->orderBy('created_at', 'desc');
     }
 
